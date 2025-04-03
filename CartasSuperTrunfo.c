@@ -10,17 +10,21 @@ int main() {
     char Estado;
     char Codig0[3];
     char CIDADE[20];
-    float Populaca0;
+    int Populaca0;
     float Are4;
     float PIB;
     int NPT;
+    float DenPopulacional;
+    float PIBpc;
     char estado;
     char codig0[3];
     char  cidade[20];
-     float populaca0;
+     int populaca0;
     float are4;
     float produtoib;
     int npt;
+    float denpopulacional;
+    float pibpc;
 
 
     printf("Carta 1:\n");
@@ -34,7 +38,7 @@ int main() {
     scanf("%s", CIDADE);
 
     printf("Digite o número populacional da cidade: \n");
-    scanf("%f", &Populaca0);
+    scanf("%d", &Populaca0);
 
     printf("Digite a área da cidade em km²: \n");
     scanf("%f", &Are4);
@@ -56,7 +60,7 @@ int main() {
     scanf("%s", cidade);
 
     printf("Digite o número populacional da cidade: \n");
-    scanf("%f", &populaca0);
+    scanf("%d", &populaca0);
 
     printf("Digite a área da cidade em km²: \n");
     scanf("%f", &are4);
@@ -67,23 +71,32 @@ int main() {
     printf("Digite o número de pontos turísticos da cidade: \n");
     scanf("%d", &NPT);
 
+    DenPopulacional = Populaca0 / Are4;
+    PIBpc = PIB / Populaca0;
+    denpopulacional = populaca0 / are4;
+    pibpc = produtoib / populaca0;
+
     printf("Carta 1:\n");
     printf("Estado: %c\n", Estado);
     printf("Código: %s\n", Codig0);
-    printf("Nome da cidade: %s\n", CIDADE);
+    printf("Nome da Cidade: %s\n", CIDADE);
     printf("População: %f\n", Populaca0);
     printf("Área: %f\n", Are4);
     printf("PIB: %f\n", PIB);
-    printf("Número de pontos turísticos: %d\n", NPT);
+    printf("Número de Pontos Turísticos: %d\n", NPT);
+    printf("Densidade Populacional: %.2f\n", DenPopulacional);
+    printf("PIB per Capita: %.2f\n", PIBpc);
 
     printf("Carta 2:\n");
     printf("Estado: %c\n", estado);
     printf("Código: %s\n", codig0);
-    printf("Nome da cidade: %s\n", cidade);
+    printf("Nome da Cidade: %s\n", cidade);
     printf("População: %f\n", populaca0);
     printf("Área: %f\n", are4);
     printf("PIB: %f\n", produtoib);
-    printf("Número de pontos turísticos: %d\n", npt);
+    printf("Número de Pontos Turísticos: %d\n", npt);
+    printf("Densidade Populacional: %.2f\n", DenPopulacional);
+    printf("PIB per Capita: %.2f\n", pibpc);
 
     
 
