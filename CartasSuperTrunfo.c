@@ -35,7 +35,7 @@ int main() {
     int resultadoPIBpc;
     int resultadoSuperPoder;
     
-
+  //pedido de entrada dos dados das cartas
   printf("Carta 1:\n");
     printf("Digite a letra do estado: \n");
     scanf("%c", &Estado);
@@ -80,11 +80,13 @@ int main() {
     printf("Digite o número de pontos turísticos da cidade: \n");
     scanf("%d", &NPT);
 
+    //cálculo da densidade populacional e PIB per capita
     DenPopulacional = Populaca0 / Are4;
     PIBpc = PIB / Populaca0;
     denpopulacional = populaca0 / are4;
     pibpc = produtoib / populaca0;
 
+    //exibição dos dados da carta 1
     printf("Carta 1:\n");
     printf("Estado: %c\n", Estado);
     printf("Código: %s\n", Codig0);
@@ -97,8 +99,10 @@ int main() {
     printf("PIB per Capita: %.2f\n", PIBpc);
     printf("SUPER Poder: %f", SuperPoder);
 
+    //cálculo do super poder da carta 1
     SuperPoder = Populaca0 + Are4 + PIB + NPT + DenPopulacional + PIBpc;
 
+    //exibição dos dados da carta 2
     printf("Carta 2:\n");
     printf("Estado: %c\n", estado);
     printf("Código: %s\n", codig0);
@@ -110,8 +114,10 @@ int main() {
     printf("Densidade Populacional: %.2f\n", denpopulacional);
     printf("PIB per Capita: %.2f\n", pibpc);
 
+    //cálculo do super poder da carta 2
     superpoder = populaca0 + are4 + produtoib + npt + denpopulacional + pibpc;
 
+    //comparação dos dados das cartas
     resultadoPopulaca0 = Populaca0 > populaca0;
     resultadoAre4 = Are4 > are4;
     resultadoPIB = PIB > produtoib;
@@ -120,6 +126,7 @@ int main() {
     resultadoPIBpc = PIBpc > pibpc;
 resultadoSuperPoder = SuperPoder > superpoder;
 
+//exibição do resultado da comparação entre as duas cartas
     printf("A População %d é maior que a População %d\n", Populaca0, populaca0);
     printf("A Área %.2f é maior que a Área %.2f\n", Are4, are4);
     printf("O PIB %.2f é maior que o PIB %.2f\n", PIB, produtoib);
@@ -139,17 +146,15 @@ printf("PIB per Capita: Carta 1 venceu (1)\n");
 printf("Super Poder: Carta 1 venceu (1)\n");
 
 
+if(PIB > produtoib){
+  printf("Carta 1 venceu!\n");
+} else{
+  printf("Carta 2 venceu!\n");
+}
 
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+printf("Carta 1-Itaituba: %f\n", &PIB);
+printf("Carta 2-Aveiro: %f\n", &produtoib);
+printf("Resultado: Carta 1 (Itaituba)venceu!\n");
 
     return 0;
 }
